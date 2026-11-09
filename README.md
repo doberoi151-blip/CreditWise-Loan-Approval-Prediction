@@ -24,6 +24,7 @@ The dataset is expected to include fields used in the notebook, such as:
 - DTI_Ratio
 - Savings
 - Loan_Approved
+  
 The CSV file was not included with the uploaded notebook. Add the dataset to the project folder before running the notebook, or update the CSV path in the first data-loading section.
 Workflow
 1. Data inspection – load the CSV and inspect the data, summary statistics, and missing values.
@@ -57,6 +58,7 @@ Technologies Used
 - Pandas and NumPy
 - Matplotlib and Seaborn
 - Scikit-learn
+- 
 How to Run
 1. Clone or download this repository.
 2. Place loan_approval_data.csv in the same directory as the notebook, or update the path in the data-loading cell.
@@ -65,16 +67,13 @@ How to Run
 4. Launch Jupyter:
    jupyter notebook
 5. Open credit_wise.ipynb and run the cells in order.
+   
 Important Notes and Future Improvements
 - Preprocessing leakage: In the current notebook, imputation and categorical encoding are performed before the train/test split. For a more reliable evaluation, fit preprocessing steps only on the training data, ideally using a Scikit-learn Pipeline and ColumnTransformer.
 - Feature engineering evaluation: The notebook performs a second train/test split for the engineered features. A fixed split and consistent preprocessing pipeline would make model comparisons more reliable.
 - Reproducibility: The split uses random_state=42; consider also using stratify=y to preserve class proportions.
 - Model selection: The notebook includes a note selecting Naive Bayes based on precision in the initial experiment. After feature engineering, Logistic Regression has the highest reported F1-score and accuracy, while Naive Bayes has the highest precision. Choose the model based on the project's actual objective and error trade-offs.
 - Add a requirements file, dataset source/licence, and a saved evaluation report when available.
-Repository Contents
-.
-├── credit_wise.ipynb
-├── loan_approval_data.csv   # add this dataset locally
-└── README.md
+  
 Author
 Dev Srivastava
