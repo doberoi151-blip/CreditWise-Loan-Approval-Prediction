@@ -77,4 +77,4 @@ Repository Contents
 ├── loan_approval_data.csv   # add this dataset locally
 └── README.md
 Author
-Dev Srivastava      
+Dev Srivastava
